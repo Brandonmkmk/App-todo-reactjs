@@ -1,24 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import { AddTask } from "./components/AgregarTarea";
+import { TaskList } from "./components/ListaTareas";
+import { TaskContextProvider } from "./context/TaskContext";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    /*TaskProvider contiene el contexto y va a compartir la informacion en los componentes AddTask y TaskList, es decir estos mismos pueden acceder a la variable de estado tasks y setTasks que se encuentran dentro del contexto*/
+    <TaskContextProvider>
+      <div className="App">
+        <AddTask />
+        <TaskList />
+      </div>
+    </TaskContextProvider>
   );
 }
 

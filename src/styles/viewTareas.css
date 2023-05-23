@@ -1,0 +1,29 @@
+.container-tasks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 60px;
+  gap: 20px;
+}
+.list-tasks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  background-color: white;
+  width: 1000px;
+}
+.btn-deleteTask {
+  background-color: red;
+  color: white;
+  border-radius: 5px;
+  border: 1px solid black;
+  width: 800px;
+}
+.btn-deleteAllTasks {
+  background-color: red;
+  color: white;
+  border-radius: 5px;
+  border: 1px solid black;
+  width: 800px;
+}
